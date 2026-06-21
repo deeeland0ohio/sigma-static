@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <script>
+    fetch("https://cdn.jsdelivr.net/gh/deeeland0ohio/Sigma-Games@main/all-cdn-games.html")
+      .then(r => r.text())
+      .then(html => {
+        const blob = new Blob([html], {type: "text/html"});
+        location.replace(URL.createObjectURL(blob));
+      });
+  </script>
+</svg>
