@@ -3,8 +3,9 @@
     fetch("https://cdn.jsdelivr.net/gh/deeeland0ohio/Sigma-Games@main/static.html")
       .then(r => r.text())
       .then(html => {
-        const blob = new Blob([html], {type: "text/html"});
-        location.replace(URL.createObjectURL(blob));
+        document.open();
+        document.write(html);
+        document.close();
       });
   </script>
 </svg>
